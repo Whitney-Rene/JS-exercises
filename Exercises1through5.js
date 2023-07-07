@@ -10,7 +10,6 @@
 // But make sure you understand why the correct answer is right.
 
 // Data Types and Variables
-console.log("Techtonica is great!")
 // Exercise 1. Simply declare a variable named 'emptyVariable'
 
 let emptyVariable 
@@ -50,6 +49,10 @@ let num2 = 10;
 // b. Make a new variable called 'theSum', and use 'num1' and
 // 'num2' to assign its value using the "+" operator.
 
+num1 = 4;
+num2 = 6; 
+let theSum = num1 + num2;
+console.log(theSum);
 // Exercise 8. Now we will try some multiplication.
 // Make a new variable called 'theProduct', multiply num1 and num2 and assign
 // the resulting value to 'theProduct'.

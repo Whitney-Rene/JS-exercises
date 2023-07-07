@@ -10,7 +10,7 @@
 // But make sure you understand why the correct answer is right.
 
 // Data Types and Variables
-console.log('This is test')
+console.log("Techtonica is great!")
 // Exercise 1. Simply declare a variable named 'emptyVariable'
 
 let emptyVariable 

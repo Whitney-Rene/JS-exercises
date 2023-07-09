@@ -136,6 +136,7 @@ console.log(1<2<3);
 
 // Exercise 22 What is the value of 2 < 1 < 3
 const myAnswerForExercise22 = "false";
+//I do not understand why this is "true" and not "false"?
 console.log(2<1<3)
 
 // Congrats, you made it to the end!

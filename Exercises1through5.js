@@ -53,15 +53,22 @@ num1 = 4;
 num2 = 6; 
 let theSum = num1 + num2;
 console.log(theSum);
+
 // Exercise 8. Now we will try some multiplication.
 // Make a new variable called 'theProduct', multiply num1 and num2 and assign
 // the resulting value to 'theProduct'.
+
+let theProduct = num1 * num2;
+console.log(theProduct);
 
 // Exercise 9.
 // Make a new variable called 'statement' and using 'myName' and
 // 'dreamDestination' and the concatenation method of your choice, make the
 // value of statement to be:
 // "Hi, my name is <your name>, and I can't wait to visit <your destination>!"
+
+let statement = "Hi, my name is " + myName + ", and I can't wait to visit " + dreamDestination + "!";
+console.log(statement);
 
 // *NOTE* For the following exercises, put your answers in the line below
 // the description of each exercise. For example, below a prompt, you may see:
@@ -72,17 +79,17 @@ console.log(theSum);
 // Exercise 10. What is the data type of the value stored in 'dreamDestination',
 // place your answer in the quotes below:
 
-const myAnswerForExercise10 = "";
+const myAnswerForExercise10 = "string";
 
 // Exercise 11. What is the data type of the value stored in 'product',
 // place your answer in the quotes below:
 
-const myAnswerForExercise11 = "";
+const myAnswerForExercise11 = "number";
 
 // Exercise 12. What do you think the value of emptyVariable is?
 // Place your answer below:
 
-const myAnswerForExercise12 = "";
+const myAnswerForExercise12 = "undefined";
 
 // Exercise 13. If
 const A = "R";
@@ -91,36 +98,45 @@ const C = 4;
 const D = "D";
 
 // What is the value of B + C
-const myAnswerForExercise13 = "";
+const myAnswerForExercise13 = "5";
+let thirteen = B + C;
+console.log(thirteen);
 
 // Exercise 14 What is the value of
 // A + "n" + D
-const myAnswerForExercise14 = "";
+const myAnswerForExercise14 = "RnD";
+let fourteen = A + "n" + D;
+console.log(fourteen);
 
 // Exercise 15 What is the value of
 // A + B * 2 + D + C / 2:
-const myAnswerForExercise15 = "";
+const myAnswerForExercise15 = "R2D2";
+//Not sure how that happens?
+let fifteen = A + B * 2 + D + C / 2;
+console.log(fifteen);
 
 // Exercise 16 What is the value of A * B
-const myAnswerForExercise16 = "";
+const myAnswerForExercise16 = "NaN/Not a Number";
 
 // Exercise 17 What is the value of true || false
-const myAnswerForExercise17 = "";
+const myAnswerForExercise17 = "boolean";
 
 // Exercise 18 What is the value of 1 === "1"
-const myAnswerForExercise18 = "";
+const myAnswerForExercise18 = "false";
 
 // Exercise 19 What is the value of 1 == "1"
-const myAnswerForExercise19 = "";
+const myAnswerForExercise19 = "true";
 
 // Exercise 20 What is the value of 1 < 1
-const myAnswerForExercise20 = "";
+const myAnswerForExercise20 = "false";
 
 // Exercise 21 What is the value of 1 < 2 < 3
-const myAnswerForExercise21 = "";
+const myAnswerForExercise21 = "true";
+console.log(1<2<3);
 
 // Exercise 22 What is the value of 2 < 1 < 3
-const myAnswerForExercise22 = "";
+const myAnswerForExercise22 = "false";
+console.log(2<1<3)
 
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?

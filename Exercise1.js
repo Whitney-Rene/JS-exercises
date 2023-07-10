@@ -142,7 +142,8 @@ console.log(2<1<3)
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
-//
+//gI found these exercises quite easy.  For exercises 15 & 22, I could not make sense of why the answer.  
+//I will ask my mentor.  I used google and console.log.
 
 // Email your file to the course staff,
 // or commit your file to GitHub and email us a link.

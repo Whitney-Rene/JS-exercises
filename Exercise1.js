@@ -111,7 +111,6 @@ console.log(fourteen);
 // Exercise 15 What is the value of
 // A + B * 2 + D + C / 2:
 const myAnswerForExercise15 = "R2D2";
-//Not sure how that happens?
 let fifteen = A + B * 2 + D + C / 2;
 console.log(fifteen);
 

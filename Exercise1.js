@@ -134,15 +134,15 @@ const myAnswerForExercise21 = "true";
 console.log(1<2<3);
 
 // Exercise 22 What is the value of 2 < 1 < 3
-const myAnswerForExercise22 = "false";
-//I do not understand why this is "true" and not "false"?
+const myAnswerForExercise22 = "true";
+//false =0, true = 1
 console.log(2<1<3)
 
 // Congrats, you made it to the end!
 // Did you find this easy or hard? If you used references, which ones helped you?
 // Please answer in a comment below.
-//gI found these exercises quite easy.  For exercises 15 & 22, I could not make sense of why the answer.  
-//I will ask my mentor.  I used google and console.log.
+//I found these exercises quite easy.  For exercises 15 & 22, I could not make sense of why the answer.  
+//I asked my mentor.  I used google and console.log.
 
 // Email your file to the course staff,
 // or commit your file to GitHub and email us a link.

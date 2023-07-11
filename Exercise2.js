@@ -177,10 +177,9 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
-    if(varA === varB){
+    if((varA === varB) && (varA != varC || varB != varC)) {
         answer6 = true;
-    }
-    else if(varA != varC || varB != varC){
+    } else {
         answer6 = false;
     }
     // --------------------------------------------
@@ -189,7 +188,8 @@ function exercise1(num1) {
     return answer6;
   }
 
-  console.log(exercise6(true, false, false));
+  console.log(exercise6("hello", "hello", "world"));
+
   // EXERCISE 7.
   // Use a switch conditional statement with case clauses such that if `num7` is
   // a number and it has a value of 1 that `answer7` is assigned the string:
@@ -208,12 +208,32 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
-  
-    // --------------------------------------------
-    // And above here
-    // --------------------------------------------
+  switch(num7){
+    case 1:
+        answer7 = "You won!";
+        break;
+    case 7:
+        answer7 = "You are lucky!";
+        break;
+    case 101:
+        answer7 ="Welcome to coding 101!";
+        break;
+    case 1000000:
+        answer7  = "You are one in a million!";
+        break;
+    default:
+        answer7 = "Thanks for that!";
+        break;
+  }
+    //--------------------------------------------
+    //And above here
+    //--------------------------------------------
     return answer7;
   }
+
+  console.log(exercise7(9));
+  console.log(exercise7(1000000));
+  console.log(exercise7(7));
   
   // EXERCISE 8.
   // Using any conditional assign the value of true to answer8 if:
@@ -225,13 +245,22 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
-  
+    if((amount1 > minimum) && (amount1 < maximum) && (amount2 > minimum) && amount2 < maximum){
+      answer8 = true;
+    }
+    else { answer8 = false;
+
+    }
     // --------------------------------------------
     // And above here
     // --------------------------------------------
     return answer8;
   }
   
+  console.log(exercise8(1, 3, 10, 5));
+  console.log(exercise8(1, 3, 0, 4));
+  console.log(exercise8(27, 49, 23, 50));
+  console.log(exercise8())
   // EXERCISE 9.
   // In this exercise, if `item` is a number, follow the rules given in Exercise 7
   // except that `answer7` is replaced by `answer9`
@@ -239,18 +268,47 @@ function exercise1(num1) {
   // "Please send a number, that was a <data type>."
   // for example, if item===true, the value should be:
   // "Please send a number, that was a boolean."
+  // (EXERCISE 7.
+  // Use a switch conditional statement with case clauses such that if `num7` is
+  // a number and it has a value of 1 that `answer7` is assigned the string:
+  // "You won!"
+  // if num7 is 7, then answer7 should be:
+  // "You are lucky!"
+  // if num7 is 101, then answer7 should be:
+  // "Welcome to coding 101!"
+  // if num7 is 1000000, then answer7 should be:
+  // "You are one in a million!"
+  // Othewise, assign answer7 a value of:
+  // "Thanks for that!")
   function exercise9(item) {
     let answer9;
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
-  
+    switch(item){
+      case 1:
+        answer9 = "You won!";
+        break;
+      case 7:
+        answer9 = "You are lucky!";
+        break;
+      case 101:
+        answer9 ="Welcome to coding 101!";
+        break;
+      case 1000000:
+        answer9  = "You are one in a million!";
+        break;
+      default:
+        answer9 = "Please send a number, that was a " + typeof item;
+        break;
+    }
     // --------------------------------------------
     // And above here
     // --------------------------------------------
     return answer9;
   }
   
+  console.log(exercise9(true));
   // EXERCISE 10.
   // This question is a modified version of a classic programming question
   // called "Fizz Buzz"
@@ -266,16 +324,29 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
-  
+  if(num10 % 3 == 0){
+    answer10 = "Fizz";
+  } else if(num10 % 5 == 0){
+    answer10 = "Buzz";
+  } else if (num10 % 15 == 0){
+    answer10 = "Fizz Buzz";
+  } else {
+    answer10 = num10;
+  }
     // --------------------------------------------
     // And above here
     // --------------------------------------------
     return answer10;
   }
   
+  console.log(exercise10(15));
+  console.log(exercise10(3));
+  console.log(exercise10(34));
+  console.log(exercise10(2));
+  console.log(exercise10(45));
   // Congrats, you made it to the end! You rock!
   // Did you find this easy or hard? If you used references, which ones helped you?
   // Please answer in a comment below.
-  //
+  //There were some parts that were complicated.  I practiced working on a problem for 20 minutes and then contacting my mentor, if I was stuck.  Number 10 is perfect, and I want to understand why, I will ask my mentor.
   
   // Email your file to us or commit your file to GitHub and email us a link.

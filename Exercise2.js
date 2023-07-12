@@ -285,6 +285,7 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
+    if(typeof(item) === "number") {
     switch(item){
       case 1:
         answer9 = "You won!";
@@ -299,8 +300,11 @@ function exercise1(num1) {
         answer9  = "You are one in a million!";
         break;
       default:
-        answer9 = "Please send a number, that was a " + typeof item;
+        answer9 = "Thanks for that!";
         break;
+    } 
+    } else {
+      answer9 = "Please send a number, that was a " + typeof item;  
     }
     // --------------------------------------------
     // And above here
@@ -309,6 +313,7 @@ function exercise1(num1) {
   }
   
   console.log(exercise9(true));
+  console.log(exercise9(5));
   // EXERCISE 10.
   // This question is a modified version of a classic programming question
   // called "Fizz Buzz"
@@ -347,6 +352,6 @@ function exercise1(num1) {
   // Congrats, you made it to the end! You rock!
   // Did you find this easy or hard? If you used references, which ones helped you?
   // Please answer in a comment below.
-  //There were some parts that were complicated.  I practiced working on a problem for 20 minutes and then contacting my mentor, if I was stuck.  Number 10 is perfect, and I want to understand why, I will ask my mentor.
+  //There were some parts that were complicated.  I practiced working on a problem for 20 minutes and then contacting my mentor, if I was stuck.  Number 10 is not perfect, and I want to understand why, I will ask my mentor.
   
   // Email your file to us or commit your file to GitHub and email us a link.

@@ -329,12 +329,12 @@ function exercise1(num1) {
     // --------------------------------------------
     // Write your code for the exercise below here:
     // --------------------------------------------
-  if(num10 % 3 == 0){
-    answer10 = "Fizz";
+  if(num10 % 15 == 0){
+    answer10 = "Fizz Buzz";
   } else if(num10 % 5 == 0){
     answer10 = "Buzz";
-  } else if (num10 % 15 == 0){
-    answer10 = "Fizz Buzz";
+  } else if (num10 % 3 == 0){
+    answer10 = "Fizz";
   } else {
     answer10 = num10;
   }

@@ -19,9 +19,22 @@
 // let obj3 = {};
 // keys(obj3); // []
 
+
+
 function keys(obj){
-    return keys
+    let arrayOfKeys = [];
+    for(let key in obj){
+        arrayOfKeys.push(key);
 }
+return arrayOfKeys
+}
+
+let obj = { a: 1, b: 2, c: 3 };
+console.log(keys(obj)); // ["a", "b", "c"]
+let obj2 = { first: 'Matt', last: 'Lane' };
+console.log(keys(obj2)); // ["first", "last"]
+let obj3 = {};
+console.log(keys(obj3)); // []
 
 // Exercise 2. Write a function called values, which accepts an object and returns an array of all of the values in the object.
 // IMPORTANT: Do not use the built in Object.values() function!
@@ -33,41 +46,122 @@ function keys(obj){
 // let obj3 = {};
 // values(obj3); // []
 
+function values(obj){
+    let arrayOfValues = [];
+    for(let key in obj){
+       arrayOfValues.push(obj[key]);
+    }      
+return arrayOfValues
+}
+
+let obj = { a: 1, b: 2, c: 3 };
+console.log(values(obj)); // [1,2,3]
+let obj2 = { first: 'Matt', last: 'Lane', isDogOwner: true };
+console.log(values(obj2)); // ["Matt", "Lane", true]
+let obj3 = {};
+console.log(values(obj3)); // []
+
 // Exercise 3. Write a function called entries, which accepts an object and returns an array of arrays of key-value pairs.
 // In other words, each sub-array is an "entry" in the object with two elements: the first element is the key, and the second element is the value.
 // IMPORTANT: Do not use the built in Object.entries() function!
+
+function entries(obj){
+    let arrayOfArrays = [];
+    for(let key in obj ){
+        arrayOfArrays.push([key, obj[key]]);
+    }
+    return arrayOfArrays
+}
+
 // Examples:
-// let obj = { a: 1, b: 2, c: 3 };
-// entries(obj);
-// [["a",1], ["b",2], ["c",3]]
-// let obj2 = { first: 'Matt', last: 'Lane', isDogOwner: true };
-// entries(obj2);
-// [["first","Matt"], ["last","Lane"], ["isDogOwner",true]]
-// let obj3 = {};
-// entries(obj3); // []
+let obj = { a: 1, b: 2, c: 3 };
+console.log(entries(obj));
+[["a",1], ["b",2], ["c",3]]
+let obj2 = { first: 'Matt', last: 'Lane', isDogOwner: true };
+console.log(entries(obj2));
+[["first","Matt"], ["last","Lane"], ["isDogOwner",true]]
+let obj3 = {};
+console.log(entries(obj3)); // []
 
 // Exercise 4. Write a function called pluck, which takes an array of objects and the name of a key.
 // The function should return an array containing the value associated with that key for each object, or undefined if that key is not present in the object.
-// Examples:
-// pluck([{ name: "Tim" }, { name: "Matt" }, { name: "Elie" }],'name')
-// ["Tim", "Matt", "Elie"]
-// pluck([{ name: "Tim", isBoatOwner: true }, { name: "Matt", isBoatOwner: false }, { name: "Elie" }],'isBoatOwner')
+function pluck(arr, keyName){
+    let valueArray = [];
+    for(let i = 0; i<arr.length; i++){
+        for(let key in arr[i]){
+            // if(arr[i].hasOwnProperty(keyName)){
+            //     return valueArray.push(arr[i][key])
+            if(key === keyName){
+                valueArray.push(arr[i][key])
+                //valueArray.push([key])
+            }
+        }
+        
+    } 
+    return valueArray;
+}
+
+// function pluck(arr, keyName) {
+//     let valueArray = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       for (let key in arr[i]) {
+//         if (key === keyName) {
+//           valueArray.push(arr[i][key]);
+//         }
+//       }
+//     }
+//     return valueArray;
+
+console.log(pluck([{ name: "Tim" }, { name: "Matt" }, { name: "Elie" }],'name'));
+//["Tim", "Matt", "Elie"]
+console.log(pluck([{ name: "Tim", isBoatOwner: true }, { name: "Matt", isBoatOwner: false }, { name: "Elie" }],'isBoatOwner'));
 // [true, false, undefined]
 
 // Exercise 5. Write a function called stringFromObject that generates a string from an object's key/value pairs.
 // The format should be "key = value, key = value".
-// Each key/value pair should be separated by a comma and space except for the last pair.
+// Each key/value pair should be separated by a comma and space except for the last pair. *THIS PART STUMPED ME!!!!!!!!  I GOOGLED/CHATGPTed it.
+//They added a boolean.  Is there another way?
+
+function stringFromObject(obj){
+    let string = "";
+    // let isFirstString = true;
+    for(let key in obj){
+        //if (!isFirstString){
+            //string += ", ";
+        }
+        string += key + " = " + obj[key];
+        // isFirstString = false;
+    }
+    return string
+}
 // Examples:
-// stringFromObject({ a: 1, b: '2' });
+console.log(stringFromObject({ a: 1, b: '2' }));
 // "a = 1, b = 2"
-// stringFromObject({ name: 'Elie', job: 'Instructor', isCatOwner: false });
+console.log(stringFromObject({ name: 'Elie', job: 'Instructor', isCatOwner: false }));
 // "name = Elie, job = Instructor, isCatOwner = false"
-// stringFromObject({}); // ""
+console.log(stringFromObject({})); // ""
 
 // Exercise 6. Write a function called minMaxKeyInObject that accepts an object with numeric keys.*
 // The function should return an array with the following format: [lowestKey, highestKey]
+
+function minMaxKeyInObject(obj){
+    let array = [];
+    let lowestKey = 0;
+    let highestKey = 0;
+    for(let key in obj){
+        if(key < lowestKey){
+            lowestKey = key;
+        }
+    }
+    for(let key in obj){
+        if(key > highestKey){
+            highestKey = key; 
+        }
+    }
+    return array.push(lowestKey, highestKey)
+}
 // Examples:
-// minMaxKeyInObject({ 2: 'a', 7: 'b', 1: 'c', 10: 'd', 4: 'e' });
+console.log(minMaxKeyInObject({ 2: 'a', 7: 'b', 1: 'c', 10: 'd', 4: 'e' }));
 // [1, 10]
 // minMaxKeyInObject({ 1: 'Elie', 4: 'Matt', 2: 'Tim' });
 // [1, 4]
